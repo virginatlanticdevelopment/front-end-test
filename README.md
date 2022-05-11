@@ -36,7 +36,7 @@ Typings for the request body and response are provided in `src/types/booking.ts`
 Please **create and commit your code into a public Github repository** and supply the link to the recruiter for review.
 
 ## Supporting Data
-The endpoint will return data relating to the holiady packages available. The key properies you should be interested in are highlighted below.  Please note, our endpoint will return much more data, but you are free to ignore this!
+The endpoint will return data relating to the holiday packages available. The key properties you should be interested in are highlighted below.  Please note, our endpoint will return much more data, but you are free to ignore this!
 
 ```
 {

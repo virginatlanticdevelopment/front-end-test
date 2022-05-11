@@ -4,7 +4,7 @@
   "description": "hotel-search-results",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve src/index.html",
+    "start": "parcel serve src/index.html --https",
     "test": "jest --config jest.config.js"
   },
   "repository": {
