@@ -4,16 +4,14 @@ hotel-search-results
 
 # Virgin Atlantic ~ Hotel Search Results (Front-end)
 ## Rules
-You must write the application in (Preact)[https://preactjs.com/] and TypeScript (as this is our technology of choice).
+You must write the application in [Preact](https://preactjs.com/) and TypeScript (as this is our technology of choice). Both are set up and ready to use.
 
 In addition you should adhere to the following conditions:
 
-1) It must be easy to run using libraries & tools commonly available on a development machine. 
-1) Clear instructions for how to build and run the application should be included within the code, e.g. `README.md`
 1) The code must be your own work. If you have a strong case to use a small code snippet of someone else's e.g. a
-boilerplate function, it must be clearly commented and attributed to the original author.
-1) You must include any unit tests you think are appropriate.
-1) Give consideration to performance and accessability.
+boilerplate function, it must be clearly commented and attributed to the original author
+1) You must include any unit tests you think are appropriate - Jest and Enzyme are set up already
+1) Give consideration to performance and accessability
 
 ## What it should do
 Build a 'search results page' which connects to our holiday search API to display a list of holidays for a given location and departure date.  Select what data items (example listed below) you think should be included on the page.
@@ -26,27 +24,13 @@ Add the ability to filter the results further by:
 1) Hotel facilities 
 1) Star rating
 
-The interface should be a web-based React application.
+The interface should be a web-based Peact application.
 
 You can call our API service by making a POST request as follows (please note that the departure date must be some date in the future!):
 
-```
-POST https://www.virginholidays.co.uk/cjs-search-api/search
+```POST https://www.virginholidays.co.uk/cjs-search-api/search```
 
-{
-  "bookingType": "hotel",
-  "location": "orlando",
-  "departureDate": "24-05-2022",
-  "duration": "7",
-  "partyCompositions": [
-    {
-      "adults": 2,
-      "childAges": [],
-      "infants": 0
-    }
-  ]
-}
-```
+Typings are provided in `src/types/booking.ts`.
 
 ## Supplying your code
 Please **create and commit your code into a public Github repository** and supply the link to the recruiter for review.  Your code should compile and run in one step.
