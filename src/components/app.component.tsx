@@ -1,7 +1,12 @@
 import { h, JSX } from 'preact'
+import HeaderComponent from './header.component'
 
 export default function App(): JSX.Element {
     return (
-      <h1>App Here</h1>
+        <section>
+            <HeaderComponent />
+
+            <h1>App Here</h1>
+        </section>
     )
 }

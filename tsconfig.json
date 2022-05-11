@@ -19,5 +19,5 @@
     ],
   },
   "include": ["src/main/**/*.tsx", "external.d.ts"],
-  "exclude": ["dist", "node_modules", "src/test/selenium/node_modules"]
+  "exclude": ["dist", "node_modules"]
 }
