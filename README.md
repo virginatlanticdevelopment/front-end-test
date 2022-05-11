@@ -4,7 +4,7 @@ hotel-search-results
 
 # Virgin Atlantic ~ Hotel Search Results (Front-end)
 ## Rules
-You must write the application in React or Preact (as this is our technology of choice).
+You must write the application in (Preact)[https://preactjs.com/] and TypeScript (as this is our technology of choice).
 
 In addition you should adhere to the following conditions:
 
@@ -13,7 +13,7 @@ In addition you should adhere to the following conditions:
 1) The code must be your own work. If you have a strong case to use a small code snippet of someone else's e.g. a
 boilerplate function, it must be clearly commented and attributed to the original author.
 1) You must include any unit tests you think are appropriate.
-1) Give consideration to performance.
+1) Give consideration to performance and accessability.
 
 ## What it should do
 Build a 'search results page' which connects to our holiday search API to display a list of holidays for a given location and departure date.  Select what data items (example listed below) you think should be included on the page.
