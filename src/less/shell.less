@@ -2,9 +2,14 @@
 @import "settings/colours.setting.less"; 
 @import "settings/type.setting.less"; 
 
+* {
+    box-sizing: border-box;
+}
+
 :global(body) {
     font-family: @primary-font;
-    font-weight: 300;
+    font-weight: @font-weight-light;
+    color: @squid-ink;
     text-align: left;
     margin: 0;
     padding: 0;

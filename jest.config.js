@@ -17,5 +17,8 @@ module.exports = {
   "moduleDirectories": [
     "node_modules"
   ],
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
   "verbose": true
 }

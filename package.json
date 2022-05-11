@@ -60,6 +60,7 @@
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "es6-promise": "^4.2.8",
+    "identity-obj-proxy": "^3.0.0",
     "preact": "10.5.10"
   },
   "alias": {

@@ -18,6 +18,6 @@
       "jest"
     ],
   },
-  "include": ["src/main/**/*.tsx", "external.d.ts"],
+  "include": ["src/main/**/*.tsx", "external.d.ts", "global.d.ts"],
   "exclude": ["dist", "node_modules"]
 }
