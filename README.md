@@ -1,7 +1,3 @@
-hotel-search-results
-
-
-
 # Virgin Atlantic ~ Hotel Search Results (Front-end)
 ## Rules
 You must write the application in [Preact](https://preactjs.com/) and [TypeScript](https://www.typescriptlang.org/). Both are set up and ready to use inside this project.
