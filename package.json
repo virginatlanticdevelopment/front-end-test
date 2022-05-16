@@ -32,6 +32,7 @@
     "@parcel/validator-typescript": "^2.0.0",
     "@types/jest": "^25.1.0",
     "@types/node": "^13.13.9",
+    "@types/luxon": "^2.3.2",
     "autoprefixer": "^9.7.4",
     "enzyme": "^3.11.0",
     "enzyme-adapter-preact-pure": "^2.2.0",
@@ -61,7 +62,10 @@
     "dotenv": "^8.2.0",
     "es6-promise": "^4.2.8",
     "identity-obj-proxy": "^3.0.0",
-    "preact": "10.5.10"
+    "luxon": "^2.4.0",
+    "preact": "10.5.10",
+    "preact-async-route": "^2.2.1",
+    "preact-router": "^4.0.1"
   },
   "alias": {
     "react": "preact/compat",

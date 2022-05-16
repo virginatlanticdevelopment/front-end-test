@@ -9,6 +9,7 @@ export interface BookingRequest {
     location: string
     departureDate: string
     duration: number
+    gateway: string
     partyCompositions: PartyComposition[]
 }
 
