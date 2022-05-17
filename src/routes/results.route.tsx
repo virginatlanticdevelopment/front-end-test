@@ -1,6 +1,6 @@
 import { h, JSX } from 'preact'
 import { useRouter } from "preact-router";
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect } from 'preact/hooks';
 import SearchComponent from '../components/search.component';
 import { doRequest } from '../services/http.service';
 import { BookingRequest, BookingResponse } from '../types/booking';
