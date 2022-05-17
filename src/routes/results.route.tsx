@@ -8,7 +8,7 @@ import { DateTime } from 'luxon';
 
 export default function ResultsRoute(): JSX.Element {
     const [searchParams] = useRouter();
-    const [loaded, setLoaded] = useState<boolen>(false);
+    const [loaded, setLoaded] = useState<boolean>(false);
 
     useEffect(() => {
         const departureDate = DateTime.fromFormat(searchParams?.matches?.departureDate, "yyyy-MM-dd").toFormat("dd-MM-yyyy");
