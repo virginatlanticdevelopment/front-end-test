@@ -8,7 +8,6 @@ import { DateTime } from 'luxon';
 
 export default function ResultsRoute(): JSX.Element {
     const [searchParams] = useRouter();
-    const [loaded, setLoaded] = useState<boolean>(false);
 
     useEffect(() => {
         const departureDate = DateTime.fromFormat(searchParams?.matches?.departureDate, "yyyy-MM-dd").toFormat("dd-MM-yyyy");
@@ -28,11 +27,10 @@ export default function ResultsRoute(): JSX.Element {
         }
 
         doRequest('POST', '/cjs-search-api/search', requestBody)
-            .then((response: BookingResponse) => {
-                console.info(response)
-                setLoaded(true)
+            .then((response: unknown | BookingResponse) => {
+                // Results are loaded here
+                console.log(response)
             })
-            .catch(e => console.error(e))
     }, [searchParams])
 
 
@@ -41,10 +39,6 @@ export default function ResultsRoute(): JSX.Element {
             <SearchComponent />
 
             <h1>Results should display here.</h1>
-
-            {
-                loaded ? "Results loaded ✅" : "Results pending..."
-            }
         </section>
     )
 }

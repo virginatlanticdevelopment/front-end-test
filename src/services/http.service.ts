@@ -1,4 +1,4 @@
-import { BookingRequest, BookingResponse } from "../types/booking"
+import { BookingRequest } from "../types/booking"
 
 export type HttpMethod = "GET" | "POST" | "PUT" | "DELETE"
 
