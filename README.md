@@ -35,4 +35,4 @@ Thanks for your time, we look forward to hearing from you!
 
 `npm run start` to start serving the application. We are using [ParcelJS](https://parceljs.org/) to bundle to refer to their documentation for more details.
 
-`npm run test` to run the unit tests. We have provided one passing starter test already.
+`npm run test` to run the unit tests. We have provided some passing tests already.

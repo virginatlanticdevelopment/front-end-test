@@ -3,6 +3,6 @@
   "transformers": {
     "*.less": ["@parcel/transformer-less"],
     "*.{jpg,png,svg}": ["@parcel/transformer-raw"],
-    "*.{ts,tsx}": ["@parcel/transformer-typescript-tsc"]
+    "*.{ts,tsx}": ["parcel-transformer-tsc-sourcemaps"]
   }
 }
