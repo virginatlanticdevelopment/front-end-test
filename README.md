@@ -7,8 +7,8 @@ In addition you should adhere to the following conditions:
 1) The code must be your own work. If you have a strong case to use a small code snippet of someone else's e.g. a
 boilerplate function, it must be clearly commented and attributed to the original author
 1) You must include any unit tests you think are appropriate - Jest and Enzyme are set up already
-1) Give consideration to performance and accessability. Lighthouse scores are high - please keep them that way
-1) Code must be clear, consise and human readable. Simplicity is often key
+1) Give consideration to performance and accessibility. Lighthouse scores are high - please keep them that way
+1) Code must be clear, concise and human readable. Simplicity is often key
 1) We do not want to see how well you can use a UI framework. This is a test and we want to see what you can create
 
 ## What it should do
