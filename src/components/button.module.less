@@ -1,0 +1,17 @@
+@import (reference) "../less/styled-components.include.less";
+
+.button {
+  text-align: center;
+  border: none;
+  background: @virgin-red;
+  color: @white;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: background-color @transition-speed @transition-easing, color @transition-speed @transition-easing;
+
+  &.skin-secondary {
+    background-color: transparent;
+  }
+}

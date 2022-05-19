@@ -1,0 +1,50 @@
+
+@import "settings/colours.setting.less"; 
+@import "settings/type.setting.less"; 
+
+* {
+    box-sizing: border-box;
+}
+
+:global(html) {
+    font-size: 62.5%;
+}
+
+:global(body) {
+    font-family: @primary-font;
+    font-weight: @font-weight-light;
+    color: @squid-ink;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    background-color: @background-grey;
+}
+
+:global(.wrapper) {
+    width: 95%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+:global(.full-bleed) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+
+:global(label) {
+    width: 100%;
+    display: block;
+}
+
+:global(h1) {
+    font-size: 2.4rem;
+}
+
+:global(input), :global(select) {
+    font-family: @primary-font;
+    font-weight: @font-weight-light;
+}

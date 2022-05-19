@@ -1,0 +1,50 @@
+@import (reference) "../less/styled-components.include.less";
+
+.search-form {
+  background: @blanket;
+  box-shadow: inset 0px -1px 0px #DEDFE1;
+  position: relative;
+  padding: 16px 0;
+}
+
+.grid {
+  display: grid;
+  align-items: end;
+  padding: 20px 0;
+  grid-template-columns: repeat(6, 1fr);
+  @media (min-width: @screen-md-min) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+  }
+  grid-gap: 16px;
+  
+  .col {
+    grid-column: span 6;
+  }
+
+  .col:nth-child(1) {
+    @media (min-width: @screen-sm-min) {
+      grid-column: span 3;
+    }
+    @media (min-width: @screen-md-min) {
+      grid-column: span 1;
+    }
+  }
+
+  .col:nth-child(2) {
+    @media (min-width: @screen-sm-min) {
+      grid-column: span 3;
+    }
+    @media (min-width: @screen-md-min) {
+      grid-column: span 1;
+    }
+  }
+
+  .col:nth-child(3), .col:nth-child(4), .col:nth-child(5) {
+    @media (min-width: @screen-sm-min) {
+      grid-column: span 2;
+    }
+    @media (min-width: @screen-md-min) {
+      grid-column: span 1;
+    }
+  }
+}

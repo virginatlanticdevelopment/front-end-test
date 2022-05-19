@@ -1,0 +1,6 @@
+{
+  "/cjs-search-api": {
+    "target": "https://www.virginholidays.co.uk/",
+    "changeOrigin": true
+  }
+}

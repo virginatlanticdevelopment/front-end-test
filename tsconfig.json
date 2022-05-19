@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "h",
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
+  },
+  "include": ["src/main/**/*.tsx", "external.d.ts", "global.d.ts"],
+  "exclude": ["dist", "node_modules"]
+}
