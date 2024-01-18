@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "jsxFactory": "h",
-    "allowSyntheticDefaultImports": true,
-    "downlevelIteration": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "sourceMap": true,
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "target": "es5",
-    "lib": [
-      "dom",
-      "es6"
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
     ],
-    "types": [
-      "node",
-      "jest"
-    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src/main/**/*.tsx", "external.d.ts", "global.d.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
