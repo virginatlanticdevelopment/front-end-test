@@ -44,3 +44,5 @@ Thanks for your time, we look forward to hearing from you!
 `yarn dev` to start serving the application in development mode. You can check a production ready build by running `yarn build && yarn start`. Please refer to the NextJS documentation for more details.
 
 `yarn cypress:open` to run the Cypress tests. We have provided some passing tests already.
+
+Built on node `v20.1.0`.
