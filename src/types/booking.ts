@@ -1,14 +1,9 @@
-export interface PartyComposition {
-    adults: number
-    childAges: number[]
-    infants: number
-}
-
 export interface BookingRequest {
     bookingType: string
     location: string
+    direct: boolean
     departureDate: string
-    duration: number
+    duration: string
     gateway: string
     partyCompositions: PartyComposition[]
 }
@@ -26,6 +21,12 @@ export interface Holiday {
     departureDate: string
     selectedDate: string
     hotel: Hotel
+}
+
+export interface PartyComposition {
+    adults: number
+    childAges: number[]
+    infants: number
 }
 
 export interface Hotel {

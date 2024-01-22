@@ -1,5 +1,0 @@
-
-{
-    "paths": ["bower_components"],
-    "globalVars": { "brand-font-path": "../../fonts/" }
-}
