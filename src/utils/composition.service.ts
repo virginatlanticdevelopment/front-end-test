@@ -1,11 +1,7 @@
 import { PartyComposition } from '@/types/booking';
 import { Parser, Result, Success, Failure, seqMap, string, regex, sepBy, of } from 'parsimmon';
 
-// parsers for each type
-const zeroOrMoreAdults: Parser<number> = seqMap(string('a'), regex(/[0-9]{1}/), (_, a) => parseInt(a));
 const oneOrMoreAdults: Parser<number> = seqMap(string('a'), regex(/[1-9]{1}/), (_, a) => parseInt(a));
-const teens: Parser<number> = seqMap(string('t'), regex(/[0-9]{1}/), (_, t) => parseInt(t));
-const children: Parser<number> = seqMap(string('c'), regex(/[0-9]{1,2}/), (_, c) => parseInt(c));
 const childAges: Parser<number[]> = sepBy(
 	seqMap(string('c'), regex(/((1{1}[0-7]{1})|[2-9])/), (_, age) => parseInt(age)),
 	string(',')
@@ -34,7 +30,7 @@ const createParser = <T>(parser: Parser<T>): ((compositions: string[]) => T[] | 
 		if (composition == null) {
 			return undefined;
 		}
-		return (composition || []).reduce((acc: T[], next: string) => {
+		return (composition || []).reduce((acc: T[] | undefined, next: string) => {
 			if (acc == null) {
 				return acc;
 			}
@@ -43,18 +39,18 @@ const createParser = <T>(parser: Parser<T>): ((compositions: string[]) => T[] | 
 			}
 			const result: Result<T> = parser.parse(next);
 			return isSuccess(result) ? acc.concat([result.value]) : undefined;
-		}, []);
+		}, [] as T[]);
 	};
 };
 
 export namespace Rooms {
-	export const parse: (compositions: string[]) => PartyComposition[] = createParser(roomParser);
+	export const parse: (compositions: string[]) => PartyComposition[] | undefined = createParser(roomParser);
 
 	export const parseAndConvert: (compositions: string[]) => PartyComposition[] = (compositions: string[]) =>
-		parse(compositions).map((room) => ({
-			adults: room.adults + room.childAges.filter((age) => age >= 16).length,
-			childAges: room.childAges.map(c => c),
-			infants: room.infants
+		parse(compositions)?.map((room) => ({
+			adults: room?.adults + (room?.childAges?.filter((age) => age >= 16)?.length ?? 0),
+			childAges: room?.childAges?.map(c => c) ?? [],
+			infants: room?.infants ?? 0
 		}));
 
 	export const format: (compositions: PartyComposition[]) => string[] = (compositions: PartyComposition[]) =>

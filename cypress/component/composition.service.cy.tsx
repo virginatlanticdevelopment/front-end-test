@@ -24,55 +24,55 @@ describe('Composition Parser', () => {
 			const rooms = ['a2'];
 			const parsed = Rooms.parse(rooms);
 			expect(parsed).to.not.be.undefined;
-			expect(parsed.length).to.equal(1);
-			expect(parsed[0].adults).to.equal(2);
-			expect(parsed[0].childAges.length).to.equal(0);
-			expect(parsed[0].infants).to.equal(0);
+			expect(parsed?.length).to.equal(1);
+			expect(parsed?.[0].adults).to.equal(2);
+			expect(parsed?.[0].childAges.length).to.equal(0);
+			expect(parsed?.[0].infants).to.equal(0);
 		});
 
 		it('should parse adults and child', () => {
 			const rooms = ['a2,c10'];
 			const parsed = Rooms.parse(rooms);
 			expect(parsed).to.not.be.undefined;
-			expect(parsed.length).to.equal(1);
-			expect(parsed[0].adults).to.equal(2);
-			expect(parsed[0].childAges.length).to.equal(1);
-			expect(parsed[0].childAges[0]).to.equal(10);
-			expect(parsed[0].infants).to.equal(0);
+			expect(parsed?.length).to.equal(1);
+			expect(parsed?.[0].adults).to.equal(2);
+			expect(parsed?.[0].childAges.length).to.equal(1);
+			expect(parsed?.[0].childAges[0]).to.equal(10);
+			expect(parsed?.[0].infants).to.equal(0);
 		});
 
 		it('should parse adults and children', () => {
 			const rooms = ['a2,c10,c6'];
 			const parsed = Rooms.parse(rooms);
 			expect(parsed).to.not.be.undefined;
-			expect(parsed.length).to.equal(1);
-			expect(parsed[0].adults).to.equal(2);
-			expect(parsed[0].childAges.length).to.equal(2);
-			expect(parsed[0].childAges[0]).to.equal(10);
-			expect(parsed[0].childAges[1]).to.equal(6);
-			expect(parsed[0].infants).to.equal(0);
+			expect(parsed?.length).to.equal(1);
+			expect(parsed?.[0].adults).to.equal(2);
+			expect(parsed?.[0].childAges.length).to.equal(2);
+			expect(parsed?.[0].childAges[0]).to.equal(10);
+			expect(parsed?.[0].childAges[1]).to.equal(6);
+			expect(parsed?.[0].infants).to.equal(0);
 		});
 
 		it('should parse adults, children and infants', () => {
 			const rooms = ['a2,c10,c6,i1'];
 			const parsed = Rooms.parse(rooms);
 			expect(parsed).to.not.be.undefined;
-			expect(parsed.length).to.equal(1);
-			expect(parsed[0].adults).to.equal(2);
-			expect(parsed[0].childAges.length).to.equal(2);
-			expect(parsed[0].childAges[0]).to.equal(10);
-			expect(parsed[0].childAges[1]).to.equal(6);
-			expect(parsed[0].infants).to.equal(1);
+			expect(parsed?.length).to.equal(1);
+			expect(parsed?.[0].adults).to.equal(2);
+			expect(parsed?.[0].childAges.length).to.equal(2);
+			expect(parsed?.[0].childAges[0]).to.equal(10);
+			expect(parsed?.[0].childAges[1]).to.equal(6);
+			expect(parsed?.[0].infants).to.equal(1);
 		});
 
 		it('should parse adults and infants', () => {
 			const rooms = ['a2,i1'];
 			const parsed = Rooms.parse(rooms);
 			expect(parsed).to.not.be.undefined;
-			expect(parsed.length).to.equal(1);
-			expect(parsed[0].adults).to.equal(2);
-			expect(parsed[0].childAges.length).to.equal(0);
-			expect(parsed[0].infants).to.equal(1);
+			expect(parsed?.length).to.equal(1);
+			expect(parsed?.[0].adults).to.equal(2);
+			expect(parsed?.[0].childAges.length).to.equal(0);
+			expect(parsed?.[0].infants).to.equal(1);
 		});
 
 		it('should parse and convert', () => {

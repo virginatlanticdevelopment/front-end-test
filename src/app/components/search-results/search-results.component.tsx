@@ -1,5 +1,4 @@
-import { POST } from "@/app/api/search/route";
-import { BookingRequest, BookingResponse } from "@/types/booking";
+import { BookingResponse } from "@/types/booking";
 import { Rooms } from "@/utils/composition.service";
 
 async function getData(params: { [key: string]: string | string[] | undefined }) {

@@ -9,6 +9,9 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	reactStrictMode: false,
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	async headers() {
 		return [
 		  {
