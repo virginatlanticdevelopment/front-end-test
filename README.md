@@ -18,7 +18,7 @@ boilerplate function, it must be clearly commented and attributed to the origina
 1) Simple CSS has been included but please use whatever CSS flavour you like: LESS, Emotion, Styled Components etc
 
 ## What it should do
-Build the 'search results page' which connects to our holiday search API to display a list of holidays for a given location and departure date. Select what data items (example listed below) you think should be included on the page. You can use the [live website](https://www.virginholidays.co.uk/holiday/orlando?departureDate=16-07-2024&duration=7&gateway=LHR&room=a2,c3,c9) as an example but feel free to change things up. 
+Build the 'search results page' which connects to our holiday search API to display a list of holidays for a given location and departure date. Select what data items (example listed below) you think should be included on the page. You can use the [live website](https://www.virginholidays.co.uk) and a holiday search as an example but feel free to change things up. 
 
 Add the ability to filter the results by:
 
@@ -26,7 +26,7 @@ Add the ability to filter the results by:
 1) Hotel facilities 
 1) Star rating
 
-The call to the API has been made inside the SearchResultsComponent and some example links are on the home route.
+The call to the API has been made inside the SearchResultsComponent and some example links are provided on the home route.
 
 Typings for the POST request body and response are provided in `src/types/booking.ts` file.
 
@@ -43,6 +43,6 @@ Thanks for your time, we look forward to hearing from you!
 
 `yarn dev` to start serving the application in development mode. You can check a production ready build by running `yarn build && yarn start`. Please refer to the NextJS documentation for more details.
 
-`yarn cypress:open` to run the Cypress tests. We have provided some passing tests already.
+`yarn cypress:open` to run the Cypress test. We have provided a passing test already for the composition service but would like to see some more.
 
 Built on node `v20.1.0`.
