@@ -2,31 +2,36 @@
   "name": "nextjs-frontend-test",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "typecheck": "tsc --noEmit",
     "start": "next start",
-    "lint": "next lint",
-    "cypress:open": "cypress open"
+    "lint": "eslint .",
+    "test:component": "cypress run --component",
+    "cypress:open": "cypress open --component"
   },
   "dependencies": {
-    "@types/luxon": "^3.4.1",
-    "@types/parsimmon": "^1.10.9",
-    "cypress": "^13.6.3",
-    "luxon": "^3.4.4",
-    "next": "14.0.4",
+    "luxon": "^3.7.2",
+    "next": "16.2.10",
     "parsimmon": "^1.18.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "swr": "^2.2.4"
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "swr": "^2.3.7"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^14.0.3",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "typescript": "^5"
+    "@next/bundle-analyzer": "^16.2.10",
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^22.20.1",
+    "@types/parsimmon": "^1.10.9",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "cypress": "^15.18.1",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.10",
+    "typescript": "^6.0.3"
   }
 }

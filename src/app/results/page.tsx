@@ -5,15 +5,23 @@ import Loading from './loading';
 export default function Results({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   return (
     <>
       <h1>Search results</h1>
 
       <Suspense fallback={<Loading />}>
-        <SearchResultsComponent searchParams={searchParams} />
+        <SearchResultsContent searchParams={searchParams} />
       </Suspense>
     </>
   )
+}
+
+async function SearchResultsContent({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  return <SearchResultsComponent searchParams={await searchParams} />
 }

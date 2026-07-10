@@ -1,15 +1,25 @@
-import { BookingResponse } from "@/types/booking";
+import { BookingRequest, BookingResponse } from "@/types/booking";
 import { Rooms } from "@/utils/composition.service";
 
 async function getData(params: { [key: string]: string | string[] | undefined }) {
-  const body = {
-    bookingType: params.bookingType,
+  const partyCompositions = Array.isArray(params.partyCompositions)
+    ? params.partyCompositions
+    : [params.partyCompositions].filter((composition): composition is string => Boolean(composition));
+
+  const parsedPartyCompositions = Rooms.parseAndConvert(partyCompositions);
+
+  if (!parsedPartyCompositions) {
+    throw new Error("Invalid party composition");
+  }
+
+  const body: BookingRequest = {
+    bookingType: String(params.bookingType),
     direct: false,
-    location: params.location,
-    departureDate: params.departureDate,
-    duration: params.duration,
-    gateway: params.gateway,
-    partyCompositions: Rooms.parseAndConvert([params.partyCompositions as string]),
+    location: String(params.location),
+    departureDate: String(params.departureDate),
+    duration: String(params.duration),
+    gateway: String(params.gateway),
+    partyCompositions: parsedPartyCompositions,
   };
 
   const res = await fetch(
