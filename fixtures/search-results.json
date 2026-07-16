@@ -98,6 +98,7 @@
           ],
           "hotelFacilities": [
             "Free WiFi",
+            "free wifi",
             "Restaurant",
             "Gym",
             "Parking"
@@ -212,10 +213,10 @@
       "selectedDate": "2026-09-16",
       "hotel": {
         "id": "mco-garden-suites",
-        "name": "Garden Suites",
+        "name": "Garden Suites with an Exceptionally Long Descriptive Hotel Name",
         "boardBasis": "Self Catering",
         "content": {
-          "name": "Garden Suites",
+          "name": "Garden Suites with an Exceptionally Long Descriptive Hotel Name",
           "vRating": 4,
           "hotelDescription": "Apartment-style accommodation with flexible facilities for longer family stays.",
           "atAGlance": [
@@ -252,6 +253,55 @@
           ],
           "starRating": 4,
           "propertyType": "Apartment"
+        }
+      }
+    },
+    {
+      "totalPrice": 2998,
+      "pricePerPerson": 1499,
+      "flyingClubMiles": 3000,
+      "virginPoints": 1499,
+      "tierPoints": 40,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-17",
+      "hotel": {
+        "id": "mco-beach-club-resort",
+        "name": "Beach Club Resort",
+        "boardBasis": "Half Board",
+        "content": {
+          "name": "Beach Club Resort",
+          "vRating": "Unrated",
+          "hotelDescription": "The same hotel returned as a different package with upgraded board basis and a later selected date.",
+          "atAGlance": [],
+          "parentLocation": "Orlando",
+          "images": [
+            {
+              "RESULTS_CAROUSEL": {
+                "url": "https://images.example.test/orlando/beach-club-resort-half-board.jpg"
+              }
+            }
+          ],
+          "holidayType": [
+            "Family",
+            "Theme parks"
+          ],
+          "boardBasis": [
+            "Half Board"
+          ],
+          "hotelLocation": [
+            "Lake Buena Vista"
+          ],
+          "accommodationType": [
+            "Hotel"
+          ],
+          "hotelFacilities": [
+            "Pool",
+            "Restaurant",
+            "Free WiFi",
+            "Kids club"
+          ],
+          "starRating": "Unrated",
+          "propertyType": "Resort"
         }
       }
     }

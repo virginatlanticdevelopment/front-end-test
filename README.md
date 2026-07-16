@@ -27,7 +27,15 @@ Add the ability to filter the results by:
 2. Hotel facilities
 3. Star rating
 
-Filters should work together, and customers should be able to clear or reset their choices. Show a helpful empty state when no holidays match the selected filters.
+Filters should work together, and customers should be able to clear or reset their choices. Filter state should be reflected in the URL so the page can be refreshed or shared without losing the selected filters. Show a helpful empty state when no holidays match the selected filters.
+
+Add a sort control for:
+
+1. Recommended
+2. Price, low to high
+3. Rating, high to low
+
+Derive filter options from the fixture data rather than hard-coding them.
 
 We are interested in your judgement as well as the implementation. Make pragmatic decisions about filter usability, missing data, responsive layout, and how much information to show.
 
@@ -37,7 +45,7 @@ Sample links are provided on the home route as entry points into the results pag
 
 Holiday package data is provided in `fixtures/search-results.json`. Use this fixture as the source of truth for the exercise; do not integrate with a live API.
 
-The fixture includes varied prices, facilities, rating formats, selected dates, and missing image/facility data so the app can be reviewed without relying on a live service.
+The fixture includes varied prices, facilities, rating formats, selected dates, duplicate hotels with different board bases, inconsistent facility casing, long hotel names, and missing image/facility data so the app can be reviewed without relying on a live service.
 
 Typings for the fixture data are provided in `src/types/booking.ts`.
 
@@ -48,9 +56,11 @@ A good submission should:
 1. Render a responsive list of comparable holiday cards.
 2. Provide accessible, labelled filter controls.
 3. Combine price, facility, and star-rating filters correctly.
-4. Handle missing images, empty facilities, and string/number ratings gracefully.
-5. Keep component, data-shaping, and filtering logic easy to follow.
-6. Include focused tests where they add confidence.
+4. Preserve filter and sort state in the URL.
+5. Derive available filter options from the data.
+6. Handle missing images, empty facilities, duplicate/cased facilities, duplicate hotels, long names, and string/number ratings gracefully.
+7. Keep component, data-shaping, and filtering logic easy to follow.
+8. Include focused tests where they add confidence.
 
 ## What we will review
 
