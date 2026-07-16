@@ -47,12 +47,12 @@ export default function Home() {
 
       <ul className={styles.list}>
         {
-          samples?.map((sample: BookingRequest, idx: number) => {
+          samples.map((sample: BookingRequest, idx: number) => {
             return (
               <li key={idx} className={styles.listItem}>
-                <Link href={`/results?bookingType=${sample?.bookingType}&location=${sample?.location}&gateway=${sample?.gateway}&departureDate=${sample?.departureDate}&duration=${sample?.duration}${sample?.partyCompositions?.map((party: PartyComposition) => `&partyCompositions=a${party?.adults}`).join('&')}`}>
+                <Link href={`/results?bookingType=${sample.bookingType}&location=${sample.location}&gateway=${sample.gateway}&departureDate=${sample.departureDate}&duration=${sample.duration}${sample.partyCompositions.map((party: PartyComposition) => `&partyCompositions=a${party.adults}`).join('&')}`}>
                   {`
-                    ${sample?.location} from ${sample?.gateway} (${sample?.duration} nights, ${Rooms.prettyFormat(sample?.partyCompositions)}) 
+                    ${sample.location} from ${sample.gateway} (${sample.duration} nights, ${Rooms.prettyFormat(sample.partyCompositions)}) 
                   `}
                 </Link>
               </li>

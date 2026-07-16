@@ -1,4 +1,4 @@
-# Virgin Atlantic Holidays Front-end Test
+# Virgin Atlantic Front-end Test
 
 Thank you for your interest in joining our front-end team and taking the time to do the test. We think it will provide a nice and interesting challenge and a good talking point for the next stage of the process.
 
@@ -13,8 +13,9 @@ For the test you should adhere to the following conditions:
 2. Include the tests you think are appropriate.
 3. Give consideration to performance, accessibility, responsive behaviour, and empty states.
 4. Code should be clear, concise, typed, and human readable.
-5. Do not use component libraries such as Bootstrap, Material UI, or similar. We want to see your component and styling decisions.
-6. Use the included CSS setup or another CSS approach you are comfortable with.
+5. You may use small, headless, or primitive component libraries where they help, but avoid assembling the page from a large opinionated UI kit. We want to see your component and styling decisions.
+6. Use the included CSS setup or whatever CSS approach you are comfortable with.
+7. You may use AI tools, but tell us which tools or models you used and what you used them for. You remain responsible for understanding and owning the submitted code.
 
 ## What it should do
 Build the search results page. It should display useful holiday cards for a selected location and departure date, with enough information for a customer to compare options.
@@ -48,6 +49,8 @@ Holiday package data is provided in `fixtures/search-results.json`. Use this fix
 The fixture includes varied prices, facilities, rating formats, selected dates, duplicate hotels with different board bases, inconsistent facility casing, long hotel names, and missing image/facility data so the app can be reviewed without relying on a live service.
 
 Typings for the fixture data are provided in `src/types/booking.ts`.
+
+Treat the fixture as if it came from a real service boundary. We are interested in how you model, normalize, and validate imperfect external data before rendering it. You may use a schema library such as Zod if you think it is appropriate.
 
 ## A good result
 
