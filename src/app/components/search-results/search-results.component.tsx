@@ -1,56 +1,12 @@
-import { BookingRequest, BookingResponse } from "@/types/booking";
-import { Rooms } from "@/utils/composition.service";
+import searchResults from "../../../../fixtures/search-results.json";
+import type { BookingResponse } from "@/types/booking";
 
-async function getData(params: { [key: string]: string | string[] | undefined }) {
-  const partyCompositions = Array.isArray(params.partyCompositions)
-    ? params.partyCompositions
-    : [params.partyCompositions].filter((composition): composition is string => Boolean(composition));
+const fixtureResults = searchResults satisfies BookingResponse;
 
-  const parsedPartyCompositions = Rooms.parseAndConvert(partyCompositions);
-
-  if (!parsedPartyCompositions) {
-    throw new Error("Invalid party composition");
-  }
-
-  const body: BookingRequest = {
-    bookingType: String(params.bookingType),
-    direct: false,
-    location: String(params.location),
-    departureDate: String(params.departureDate),
-    duration: String(params.duration),
-    gateway: String(params.gateway),
-    partyCompositions: parsedPartyCompositions,
-  };
-
-  const res = await fetch(
-    "https://www.virginholidays.co.uk/cjs-search-api/search",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
-export default async function SearchResultsComponent({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const req = await getData(searchParams);
-  const results: BookingResponse = req;
-
+export default function SearchResultsComponent() {
   return (
     <section>
-      <h2>{results?.holidays?.length} results found</h2>
+      <h2>{fixtureResults.holidays.length} results found</h2>
       <p>Please fill out the filters and results list below&hellip;</p>
     </section>
   );

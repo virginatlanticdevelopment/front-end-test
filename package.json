@@ -10,9 +10,7 @@
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "start": "next start",
-    "lint": "eslint .",
-    "test:component": "cypress run --component",
-    "cypress:open": "cypress open --component"
+    "lint": "eslint ."
   },
   "dependencies": {
     "luxon": "^3.7.2",
@@ -29,7 +27,6 @@
     "@types/parsimmon": "^1.10.9",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "cypress": "^15.18.1",
     "eslint": "^9.39.4",
     "eslint-config-next": "16.2.10",
     "typescript": "^6.0.3"
