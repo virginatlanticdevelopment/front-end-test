@@ -1,0 +1,309 @@
+{
+  "holidays": [
+    {
+      "totalPrice": 2398,
+      "pricePerPerson": 1199,
+      "flyingClubMiles": 2400,
+      "virginPoints": 1199,
+      "tierPoints": 40,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-14",
+      "hotel": {
+        "id": "mco-beach-club-resort",
+        "name": "Beach Club Resort",
+        "boardBasis": "Room Only",
+        "content": {
+          "name": "Beach Club Resort",
+          "vRating": 4,
+          "hotelDescription": "A family-friendly resort close to the parks with a large pool area and shuttle links.",
+          "atAGlance": [
+            "Close to theme parks",
+            "Large pool area",
+            "Complimentary shuttle"
+          ],
+          "parentLocation": "Orlando",
+          "images": [
+            {
+              "RESULTS_CAROUSEL": {
+                "url": "https://images.example.test/orlando/beach-club-resort.jpg"
+              }
+            }
+          ],
+          "holidayType": [
+            "Family",
+            "Theme parks"
+          ],
+          "boardBasis": [
+            "Room Only"
+          ],
+          "hotelLocation": [
+            "Lake Buena Vista"
+          ],
+          "accommodationType": [
+            "Hotel"
+          ],
+          "hotelFacilities": [
+            "Pool",
+            "Free WiFi",
+            "Kids club",
+            "Parking"
+          ],
+          "starRating": 4,
+          "propertyType": "Resort"
+        }
+      }
+    },
+    {
+      "totalPrice": 3410,
+      "pricePerPerson": 1705,
+      "flyingClubMiles": 3400,
+      "virginPoints": 1705,
+      "tierPoints": 60,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-14",
+      "hotel": {
+        "id": "mco-skyline-grand",
+        "name": "Skyline Grand Hotel",
+        "boardBasis": "Bed and Breakfast",
+        "content": {
+          "name": "Skyline Grand Hotel",
+          "vRating": "4.5",
+          "hotelDescription": "A city-style hotel with premium rooms, rooftop dining, and strong transport links.",
+          "atAGlance": [
+            "Rooftop restaurant",
+            "Premium rooms",
+            "Near shopping and dining"
+          ],
+          "parentLocation": "Orlando",
+          "images": [
+            {
+              "RESULTS_CAROUSEL": {
+                "url": "https://images.example.test/orlando/skyline-grand.jpg"
+              }
+            }
+          ],
+          "holidayType": [
+            "City",
+            "Couples"
+          ],
+          "boardBasis": [
+            "Bed and Breakfast",
+            "Room Only"
+          ],
+          "hotelLocation": [
+            "International Drive"
+          ],
+          "accommodationType": [
+            "Hotel"
+          ],
+          "hotelFacilities": [
+            "Free WiFi",
+            "free wifi",
+            "Restaurant",
+            "Gym",
+            "Parking"
+          ],
+          "starRating": "4",
+          "propertyType": "Hotel"
+        }
+      }
+    },
+    {
+      "totalPrice": 5120,
+      "pricePerPerson": 2560,
+      "flyingClubMiles": 5120,
+      "virginPoints": 2560,
+      "tierPoints": 80,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-15",
+      "hotel": {
+        "id": "mco-lagoon-villas",
+        "name": "Lagoon Villas",
+        "boardBasis": "All Inclusive",
+        "content": {
+          "name": "Lagoon Villas",
+          "vRating": 5,
+          "hotelDescription": "A high-end villa resort with private terraces and a broad all-inclusive dining offer.",
+          "atAGlance": [
+            "Private villa accommodation",
+            "All-inclusive dining",
+            "Spa and wellness centre"
+          ],
+          "parentLocation": "Orlando",
+          "images": [
+            {
+              "RESULTS_CAROUSEL": {
+                "url": "https://images.example.test/orlando/lagoon-villas.jpg"
+              }
+            }
+          ],
+          "holidayType": [
+            "Luxury",
+            "Villa"
+          ],
+          "boardBasis": [
+            "All Inclusive"
+          ],
+          "hotelLocation": [
+            "Kissimmee"
+          ],
+          "accommodationType": [
+            "Villa"
+          ],
+          "hotelFacilities": [
+            "Pool",
+            "Spa",
+            "Restaurant",
+            "Gym",
+            "Free WiFi"
+          ],
+          "starRating": 5,
+          "propertyType": "Villa"
+        }
+      }
+    },
+    {
+      "totalPrice": 1598,
+      "pricePerPerson": 799,
+      "flyingClubMiles": 1600,
+      "virginPoints": 799,
+      "tierPoints": 20,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-14",
+      "hotel": {
+        "id": "mco-budget-inn",
+        "name": "Budget Inn Orlando",
+        "boardBasis": "Room Only",
+        "content": {
+          "name": "Budget Inn Orlando",
+          "vRating": "3",
+          "hotelDescription": "A simple, low-cost base for travellers who plan to spend most of their time out exploring.",
+          "atAGlance": [
+            "Low-cost option",
+            "Simple rooms",
+            "Good road access"
+          ],
+          "parentLocation": "Orlando",
+          "images": [],
+          "holidayType": [
+            "Value"
+          ],
+          "boardBasis": [
+            "Room Only"
+          ],
+          "hotelLocation": [
+            "Orlando"
+          ],
+          "accommodationType": [
+            "Motel"
+          ],
+          "hotelFacilities": [],
+          "starRating": "3",
+          "propertyType": "Motel"
+        }
+      }
+    },
+    {
+      "totalPrice": 2780,
+      "pricePerPerson": 1390,
+      "flyingClubMiles": 2780,
+      "virginPoints": 1390,
+      "tierPoints": 40,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-16",
+      "hotel": {
+        "id": "mco-garden-suites",
+        "name": "Garden Suites with an Exceptionally Long Descriptive Hotel Name",
+        "boardBasis": "Self Catering",
+        "content": {
+          "name": "Garden Suites with an Exceptionally Long Descriptive Hotel Name",
+          "vRating": 4,
+          "hotelDescription": "Apartment-style accommodation with flexible facilities for longer family stays.",
+          "atAGlance": [
+            "Apartment-style rooms",
+            "Kitchenette facilities",
+            "Quiet garden setting"
+          ],
+          "parentLocation": "Orlando",
+          "images": [
+            {
+              "RESULTS_CAROUSEL": {
+                "url": "https://images.example.test/orlando/garden-suites.jpg"
+              }
+            }
+          ],
+          "holidayType": [
+            "Family",
+            "Self catering"
+          ],
+          "boardBasis": [
+            "Self Catering"
+          ],
+          "hotelLocation": [
+            "Celebration"
+          ],
+          "accommodationType": [
+            "Apartment"
+          ],
+          "hotelFacilities": [
+            "Pool",
+            "Kitchenette",
+            "Laundry",
+            "Free WiFi"
+          ],
+          "starRating": 4,
+          "propertyType": "Apartment"
+        }
+      }
+    },
+    {
+      "totalPrice": 2998,
+      "pricePerPerson": 1499,
+      "flyingClubMiles": 3000,
+      "virginPoints": 1499,
+      "tierPoints": 40,
+      "departureDate": "2026-09-14",
+      "selectedDate": "2026-09-17",
+      "hotel": {
+        "id": "mco-beach-club-resort",
+        "name": "Beach Club Resort",
+        "boardBasis": "Half Board",
+        "content": {
+          "name": "Beach Club Resort",
+          "vRating": "Unrated",
+          "hotelDescription": "The same hotel returned as a different package with upgraded board basis and a later selected date.",
+          "atAGlance": [],
+          "parentLocation": "Orlando",
+          "images": [
+            {
+              "RESULTS_CAROUSEL": {
+                "url": "https://images.example.test/orlando/beach-club-resort-half-board.jpg"
+              }
+            }
+          ],
+          "holidayType": [
+            "Family",
+            "Theme parks"
+          ],
+          "boardBasis": [
+            "Half Board"
+          ],
+          "hotelLocation": [
+            "Lake Buena Vista"
+          ],
+          "accommodationType": [
+            "Hotel"
+          ],
+          "hotelFacilities": [
+            "Pool",
+            "Restaurant",
+            "Free WiFi",
+            "Kids club"
+          ],
+          "starRating": "Unrated",
+          "propertyType": "Resort"
+        }
+      }
+    }
+  ]
+}

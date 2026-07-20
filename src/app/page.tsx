@@ -10,7 +10,7 @@ export default function Home() {
     {
       bookingType: 'holiday',
       location: 'orlando',
-      departureDate: DateTime.now().plus({ days: 7, months: 1}).toFormat(DATE_FORMATS.URL_DATE),
+      departureDate: DateTime.now().plus({ days: 7, months: 1 }).toFormat(DATE_FORMATS.URL_DATE),
       direct: false,
       duration: "7",
       gateway: 'LHR',
@@ -47,12 +47,12 @@ export default function Home() {
 
       <ul className={styles.list}>
         {
-          samples?.map((sample: BookingRequest, idx: number) => {
+          samples.map((sample: BookingRequest, idx: number) => {
             return (
               <li key={idx} className={styles.listItem}>
-                <Link href={`/results?bookingType=${sample?.bookingType}&location=${sample?.location}&gateway=${sample?.gateway}&departureDate=${sample?.departureDate}&duration=${sample?.duration}${sample?.partyCompositions?.map((party: PartyComposition, i: number) => `&partyCompositions=a${party?.adults}`).join('&')}`}>
+                <Link href={`/results?bookingType=${sample.bookingType}&location=${sample.location}&gateway=${sample.gateway}&departureDate=${sample.departureDate}&duration=${sample.duration}${sample.partyCompositions.map((party: PartyComposition) => `&partyCompositions=a${party.adults}`).join('&')}`}>
                   {`
-                    ${sample?.location} from ${sample?.gateway} (${sample?.duration} nights, ${Rooms.prettyFormat(sample?.partyCompositions)}) 
+                    ${sample.location} from ${sample.gateway} (${sample.duration} nights, ${Rooms.prettyFormat(sample.partyCompositions)}) 
                   `}
                 </Link>
               </li>

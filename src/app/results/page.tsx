@@ -1,19 +1,17 @@
-import { Suspense } from 'react';
 import SearchResultsComponent from '../components/search-results/search-results.component'
-import Loading from './loading';
 
-export default function Results({
+type SearchParams = { [key: string]: string | string[] | undefined };
+
+export default async function Results({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<SearchParams>
 }) {
   return (
     <>
       <h1>Search results</h1>
 
-      <Suspense fallback={<Loading />}>
-        <SearchResultsComponent searchParams={searchParams} />
-      </Suspense>
+      <SearchResultsComponent searchParams={await searchParams} />
     </>
   )
 }

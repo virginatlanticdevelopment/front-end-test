@@ -43,27 +43,32 @@ const createParser = <T>(parser: Parser<T>): ((compositions: string[]) => T[] | 
 	};
 };
 
-export namespace Rooms {
-	export const parse: (compositions: string[]) => PartyComposition[] | undefined = createParser(roomParser);
+const parse: (compositions: string[]) => PartyComposition[] | undefined = createParser(roomParser);
 
-	export const parseAndConvert: (compositions: string[]) => PartyComposition[] = (compositions: string[]) =>
-		parse(compositions)?.map((room) => ({
-			adults: room?.adults + (room?.childAges?.filter((age) => age >= 16)?.length ?? 0),
-			childAges: room?.childAges?.map(c => c) ?? [],
-			infants: room?.infants ?? 0
-		}));
+const parseAndConvert = (compositions: string[]): PartyComposition[] | undefined =>
+	parse(compositions)?.map((room) => ({
+		adults: room?.adults + (room?.childAges?.filter((age) => age >= 16)?.length ?? 0),
+		childAges: room?.childAges?.map(c => c) ?? [],
+		infants: room?.infants ?? 0
+	}));
 
-	export const format: (compositions: PartyComposition[]) => string[] = (compositions: PartyComposition[]) =>
-		compositions.map((composition) => {
-			const childAges = composition.childAges.length > 0 ? `,c${composition.childAges.join(',c')}` : '';
-			const infants = composition.infants > 0 ? `,i${composition.infants}` : '';
-			return `a${composition.adults}${childAges}${infants}`;
-		});
+const format: (compositions: PartyComposition[]) => string[] = (compositions: PartyComposition[]) =>
+	compositions.map((composition) => {
+		const childAges = composition.childAges.length > 0 ? `,c${composition.childAges.join(',c')}` : '';
+		const infants = composition.infants > 0 ? `,i${composition.infants}` : '';
+		return `a${composition.adults}${childAges}${infants}`;
+	});
 
-	export const prettyFormat = (composition: PartyComposition[]): string => {
-		if (!composition) return '';
+const prettyFormat = (composition: PartyComposition[]): string => {
+	if (!composition) return '';
 
-		const total = composition.reduce((acc, room) => acc + room.adults + room.childAges.length + room.infants, 0);
-		return `${total} ${total > 1 ? 'people' : 'person'} / ${composition.length} ${composition.length > 1 ? 'rooms' : 'room'}`;
-	};
-}
+	const total = composition.reduce((acc, room) => acc + room.adults + room.childAges.length + room.infants, 0);
+	return `${total} ${total > 1 ? 'people' : 'person'} / ${composition.length} ${composition.length > 1 ? 'rooms' : 'room'}`;
+};
+
+export const Rooms = {
+	parse,
+	parseAndConvert,
+	format,
+	prettyFormat,
+};

@@ -1,46 +1,32 @@
-import { BookingResponse } from "@/types/booking";
-import { Rooms } from "@/utils/composition.service";
+import searchResults from "../../../../fixtures/search-results.json";
+import type { BookingResponse } from "@/types/booking";
 
-async function getData(params: { [key: string]: string | string[] | undefined }) {
-  const body = {
-    bookingType: params.bookingType,
-    direct: false,
-    location: params.location,
-    departureDate: params.departureDate,
-    duration: params.duration,
-    gateway: params.gateway,
-    partyCompositions: Rooms.parseAndConvert([params.partyCompositions as string]),
-  };
+const fixtureResults = searchResults satisfies BookingResponse;
 
-  const res = await fetch(
-    "https://www.virginholidays.co.uk/cjs-search-api/search",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    }
-  );
+type SearchParams = { [key: string]: string | string[] | undefined };
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+const getSingleParam = (value: string | string[] | undefined) => {
+  return Array.isArray(value) ? value[0] : value;
+};
 
-  return res.json();
-}
-
-export default async function SearchResultsComponent({
+export default function SearchResultsComponent({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: SearchParams;
 }) {
-  const req = await getData(searchParams);
-  const results: BookingResponse = req;
+  const location = getSingleParam(searchParams.location);
+  const departureDate = getSingleParam(searchParams.departureDate);
 
   return (
     <section>
-      <h2>{results?.holidays?.length} results found</h2>
+      <h2>{fixtureResults.holidays.length} results found</h2>
+      {(location || departureDate) && (
+        <p>
+          Showing fixture results
+          {location ? ` for ${location}` : ""}
+          {departureDate ? ` departing ${departureDate}` : ""}.
+        </p>
+      )}
       <p>Please fill out the filters and results list below&hellip;</p>
     </section>
   );
